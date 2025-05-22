@@ -1,12 +1,20 @@
+header {
+    position: relative;
+    height: 100%;
+    margin: 0 auto;
+}
+
 nav {
     display: flex;
     width: 100%;
+    height: 10vw;
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    background-color: #f1f1f1;
     position: fixed;
+    z-index: 10;
     top: 0;
+    background-color: #f1f1f1;
     left: 0;
 }
 
@@ -93,6 +101,14 @@ nav a {
     justify-content: space-around;
     background-color: #f1f1f1;
 }
+.logo{
+    width: 20%;
+    height: 8vw;
+    background-image: url(./pic/ロゴ.png);
+    background-size: 95%;
+    background-position: top right;
+    background-repeat:no-repeat;
+}
 .sns {
     width: 100%;
 }
@@ -119,16 +135,59 @@ nav a {
     }
 }
 
+/* キービジュアル */
+.keyvisual{
+    margin: auto;
+    margin-bottom: 46px;
+    width: 100%;
+    height: 50vw;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+}
+.keyvisual img {
+    width: inherit;
+    height: inherit;
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+  }
+  
+.keyvisual::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 84px;
+    background-image: url(./pic/wave.png);
+    background-size: 100%;
+    background-position: center bottom;
+    background-repeat:no-repeat;
+}
+
+.slide > :first-child {
+    animation-name: slide-4;     /* 作成したキーフレームを使う */
+    animation-duration: 15s;    /* アニメーション全体を5秒にする */
+    animation-delay: 2s;       /* 直ちにアニメーション開始する */
+    animation-iteration-count: infinite; /* 永遠にアニメーションする */
+    transition-timing-function:ease-in-out;
+}
+
+@keyframes slide-4 {
+    0% { margin-left: 0; }
+    33% { margin-left: -100%; }
+    66% { margin-left: -200%; }
+    100% { margin-left: -300%; }
+  }
+
 @media screen and (max-width: 480px) {
     /* 480px以下に適用されるCSS（スマホ用） */
-    nav{
-        height: 11.71875vw;
-    }
     .menu {
         display: none;
         flex-direction: column;
         position: fixed;
-        top: 11.71875vw;
+        top: 10vw;
         left: 0;
         width: 100%;
         height: 100vh;
