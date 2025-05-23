@@ -3,6 +3,7 @@ body {
     font-weight: 500;
     padding-top: 8vw;
     font-size: 60%;
+    background-color: #f1f1f1;
 }
 
 
@@ -26,14 +27,15 @@ nav {
     background-color: #f1f1f1;
     left: 0;
 }
-
-nav ul {
+ul {
     margin: 0;
     padding: 0;
 }
+li {
+    list-style: none;
+}
 
 nav li {
-    list-style: none;
     display: inline-block;
     min-width: 90px;
 }
@@ -226,21 +228,15 @@ nav a {
     color: #005CAC;
 }
 
+
 .important {
-    width: 80vw;
-    margin: auto;
-    text-align: center;
-    margin: 40px auto;
-    padding: 20px;
     color: #da4d4d;
     background-color: #da4d4d2d;
     border-radius: 20px;
-}
-
-.important p {
-    font-size: 2vw;
-    margin: 0 0 15px 0;
-    font-weight: bold;
+    width: 80vw;
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
 }
 
 .important ul {
@@ -248,6 +244,11 @@ nav a {
     padding: 0;
 }
 
+.important p {
+    font-size: 2vw;
+    margin: 0 0 15px 0;
+    font-weight: bold;
+}
 .important li {
     list-style: none;
     text-align: left;
@@ -255,13 +256,73 @@ nav a {
     margin: 5px 0;
 }
 
+/*block要素*/
+.content{
+    background-color: yellowgreen;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+.content p {
+    font-size: 2vw;
+    padding: 15px 0;
+    margin: 0;
+    font-weight: bold;
+}
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 84px;
+    background-image: url(./pic/wave.png);
+    background-size: 100%;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
+.picup{
+    position: relative;
+    padding-bottom: 84px;
+    background-color: #b9d1e6;
+}
 
-
-
-
-
-
-
+/*イベント*/
+.event{
+    background-color: #778796;
+}
+/*料金*/
+.price{
+    background-color: #414a52;
+}
+/*フロアマップ*/
+.factory-info{
+    padding: 0 10%;
+    position: relative;
+    background-color: #22272b;
+    color: #f1f1f1;
+}
+.factory-info ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.factory-info li{
+    width: 45%;
+    margin: 20px 0;
+}
+.factory-info li p{
+    background-color: #f1f1f1;
+    display: inline-block;
+    font-size: 2vw;
+    padding: 15px 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #22272b;
+}
+.factory-info li img{
+    width: 100%;
+    border-radius: 20px;
+}
 
 @media screen and (max-width: 480px) {
 
@@ -340,4 +401,24 @@ nav a {
     .important p {
         font-size: 15px;
     }
+/*block要素*/
+.content p {
+    font-size: 6vw;
+}
+
+    /*フロアマップ*/
+.factory-info ul{
+    display: block;
+}
+.factory-info li{
+    width: 100%;
+    margin: 20px 0;
+}
+.factory-info li p{
+    font-size: 3vw;
+}
+.factory-info li img{
+    border-radius: 10px;
+}
+
 }
