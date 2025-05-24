@@ -69,17 +69,28 @@
         </ul>
     </div>
 
-    <div class="today-info"></div>
-
     <div class="content">
-        <div class="picup">
+        <div class="today-info">
             <p>本日の営業時間</p>
-            <ul>
-                <li>2025.06.08（日）世界海洋デーのお知らせ</li>
-                <li>2025.06.01（日）防災の日・防災用品点検の日</li>
-                <li>2025.05.23（金）骨密度ケアの日</li>
-            </ul>
-            <span class="wave"></span>
+            <div class="today-box">
+                <p class="today-box-title"><strong id="showtoday6"></strong></p>
+                <p>10:00〜17:00<span class="today-box-min">（最終入館 > 16:00まで）</span></p>
+                <script>
+                    document.getElementById("showtoday6").innerHTML = showtoday6();
+                    function showtoday6() {
+                        const now = new Date();
+                        const month = now.getMonth() + 1;
+                        const date = now.getDate();
+                        const showtoday6 = month + "月" + date + "日";
+                        return showtoday6;
+                    }
+                </script>
+            </div>
+            <div class="today-box">
+                <p class="today-box-title">現在の混雑情報</p>
+                <span>---</span>
+            </div>
+            <span class="wave"><img src="./pic/wave.png"></span>
         </div>
         <div class="event">
             <p>イベント</p>
@@ -100,9 +111,15 @@
         <div class="factory-info">
             <p>フロアマップ</p>
             <ul>
-                <li><p>F1</p><img src="./pic/サムネ1.png"></li>
-                <li><p>F1</p><img src="./pic/サムネ1.png"></li>
-                <li><p>F1</p><img src="./pic/サムネ1.png"></li>
+                <li>
+                    <p>F1</p><img src="./pic/サムネ1.png">
+                </li>
+                <li>
+                    <p>F1</p><img src="./pic/サムネ1.png">
+                </li>
+                <li>
+                    <p>F1</p><img src="./pic/サムネ1.png">
+                </li>
             </ul>
         </div>
     </div>
