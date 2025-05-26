@@ -3,10 +3,15 @@ body {
     font-weight: 500;
     padding-top: 8vw;
     font-size: 65%;
+    margin: 0;
     background-color: #f1f1f1;
 }
 
-
+h3 {
+    font-size: 30px;
+    margin: 0;
+    padding: 30px 0;
+}
 
 header {
     position: relative;
@@ -27,10 +32,12 @@ nav {
     background-color: #f1f1f1;
     left: 0;
 }
+
 ul {
     margin: 0;
     padding: 0;
 }
+
 li {
     list-style: none;
 }
@@ -38,16 +45,16 @@ li {
 nav li {
     display: inline-block;
     min-width: 90px;
+    padding: 8px;
+    font-size: 1vw;
 }
 
 .sns li {
     width: auto;
-    padding: 10px;
 }
 
 .item li {
     width: 15%;
-    padding: 10px;
 }
 
 .item li:not(:last-child) {
@@ -161,13 +168,13 @@ nav a {
     margin: auto;
     margin-bottom: 46px;
     width: 100%;
-    height: 50vw;
+    height: 43vw;
     white-space: nowrap;
     overflow: hidden;
     position: relative;
 }
 
-.keyvisual img {
+.slide img {
     width: inherit;
     height: inherit;
     margin: 0;
@@ -249,6 +256,7 @@ nav a {
     margin: 0 0 15px 0;
     font-weight: bold;
 }
+
 .important li {
     list-style: none;
     text-align: left;
@@ -257,30 +265,33 @@ nav a {
 }
 
 /*block要素*/
-.content{
+.content {
     width: 100%;
     margin: auto;
     text-align: center;
 }
+
 .content p {
     font-size: 2vw;
     padding: 15px 0;
     margin: 0;
     font-weight: bold;
 }
-.wave img{
+
+.wave img {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
 }
+
 /*本日の営業時間*/
-.today-info{
+.today-info {
     position: relative;
     padding-bottom: 84px;
-    background-color: #b9d1e6;
 }
-.today-box{
+
+.today-box {
     width: 80vw;
     margin: 1vw auto;
     background-color: #f1f1f1;
@@ -289,43 +300,134 @@ nav a {
     padding: 1vw;
     border: 3px solid #005CAC;
 }
-.today-box-title{
+
+.today-box2 {
+    width: 30vw;
+    margin: 1vw auto;
+    border-radius: 50px;
+    color: #f1f1f1;
+    background-color: #da4d4d;
+}
+
+.today-box-title {
     background-color: #005CAC;
     color: #f1f1f1;
     border-radius: 10px;
 }
 
-.today-box-min{
+.today-box-min {
     font-size: 1.5vw;
-    font-weight:lighter;
+    font-weight: lighter;
 }
 
 
 /*イベント*/
-.event{
+.event {
     background-color: #778796;
+    position: relative;
+    padding-bottom: 84px;
 }
+
+.event-box {
+    margin: auto;
+    position: relative;
+    width: 80vw;
+}
+
+.slide2 {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.event-box-item {
+    width: 40%;
+    padding: 0 3%;
+    margin: 0%;
+    scroll-snap-align: start;
+    flex: none;
+}
+
+.event-box-item p {
+    padding: 0;
+    text-align: left;
+}
+
+.slide2 img {
+    border-radius: 20px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.slide2-btn {
+    &::scroll-button(right) {
+        position: absolute;
+        top: 40%;
+        right: 0;
+        content: ">" / "Scroll Right";
+    }
+
+    &::scroll-button(left) {
+        position: absolute;
+        top: 40%;
+        left: 0;
+        content: "<" / "Scroll Left";
+    }
+
+    &::scroll-button(*) {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        color: #f1f1f1;
+        background-color: #005CAC;
+        border: 1px solid #005CAC;
+    }
+
+    &::scroll-button(*):hover {
+        background-color: #22272b;
+        border: 1px solid #22272b;
+        color: #f1f1f1;
+    }
+}
+
+/*スクロールバー非表示（IE・Edge）*/
+.slide2 {
+    -ms-overflow-style: none;
+}
+
+/*スクロールバー非表示（Chrome・Safari）*/
+.slide2::-webkit-scrollbar {
+    display: none;
+}
+
 /*料金*/
-.price{
+.price {
     background-color: #414a52;
+    position: relative;
+    padding-bottom: 84px;
 }
+
 /*フロアマップ*/
-.factory-info{
+.factory-info {
     padding: 0 10%;
     position: relative;
     background-color: #22272b;
     color: #f1f1f1;
 }
-.factory-info ul{
+
+.factory-info ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.factory-info li{
+
+.factory-info li {
     width: 45%;
     margin: 20px 0;
 }
-.factory-info li p{
+
+.factory-info li p {
     background-color: #f1f1f1;
     display: inline-block;
     font-size: 2vw;
@@ -334,12 +436,17 @@ nav a {
     margin-bottom: 5px;
     color: #22272b;
 }
-.factory-info li img{
+
+.factory-info li img {
     width: 100%;
     border-radius: 20px;
 }
 
 @media screen and (max-width: 480px) {
+
+    h3 {
+        font-size: 25px;
+    }
 
     /* 480px以下に適用されるCSS（スマホ用） */
     .menu {
@@ -416,41 +523,111 @@ nav a {
     .important p {
         font-size: 15px;
     }
-/*block要素*/
-.content p {
-    font-size: 6vw;
-}
 
-/*本日の営業時間*/
-.today-info{
-    padding-bottom: 84px;
-}
-.today-box{
-    margin: 2vw auto;
-    border-radius: 10px;
-    padding: 2vw;
-}
-.today-box-title{
-    border-radius: 5px;
-}
-.today-box-min{
-    display:block;
-    font-size: 15px;
-}
+    /*block要素*/
+    .content p {
+        font-size: 3.4vw;
+    }
+
+    /*本日の営業時間*/
+    .today-info {
+        padding-bottom: 84px;
+    }
+
+    .today-box {
+        margin: 2vw auto;
+        border-radius: 10px;
+        padding: 2vw;
+    }
+
+    .today-box-title {
+        border-radius: 5px;
+    }
+
+    .today-box-min {
+        display: block;
+        font-size: 15px;
+    }
+
+    .today-box2 {
+        width: 60vw;
+        margin: 1vw auto;
+        border-radius: 50px;
+    }
+
+    /*イベント*/
+
+    .slide2 {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+    }
+
+    .event-box-item {
+        width: 80%;
+        padding: 0 5%;
+        scroll-snap-align: center;
+    }
+
+    .event-box-item p {
+        padding: 0;
+        text-align: left;
+    }
+
+    .slide2 img {
+        border-radius: 20px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .slide2-btn {
+        &::scroll-button(right) {
+            position: absolute;
+            top: 40%;
+            right: 0;
+            content: ">" / "Scroll Right";
+        }
+
+        &::scroll-button(left) {
+            position: absolute;
+            top: 40%;
+            left: 0;
+            content: "<" / "Scroll Left";
+        }
+
+        &::scroll-button(*) {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            color: #f1f1f1;
+            background-color: #005CAC;
+            border: 1px solid #005CAC;
+        }
+
+        &::scroll-button(*):hover {
+            background-color: #22272b;
+            border: 1px solid #22272b;
+            color: #f1f1f1;
+        }
+    }
 
     /*フロアマップ*/
-.factory-info ul{
-    display: block;
-}
-.factory-info li{
-    width: 100%;
-    margin: 20px 0;
-}
-.factory-info li p{
-    font-size: 3vw;
-}
-.factory-info li img{
-    border-radius: 10px;
-}
+    .factory-info ul {
+        display: block;
+    }
+
+    .factory-info li {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .factory-info li p {
+        font-size: 3vw;
+    }
+
+    .factory-info li img {
+        border-radius: 10px;
+    }
 
 }
