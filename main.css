@@ -10,8 +10,14 @@ body {
 h3 {
     font-size: 30px;
     margin: 0;
-    padding: 30px 0;
+    padding-top: 30px;
 }
+h4 {
+    font-size: 15px;
+    margin: 0;
+    padding: 10px 0 30px 0;
+}
+
 
 header {
     position: relative;
@@ -233,6 +239,7 @@ nav a {
     justify-content: center;
     margin: 40px auto;
     color: #005CAC;
+    text-align: center;
 }
 
 
@@ -289,13 +296,13 @@ nav a {
 .today-info {
     position: relative;
     padding-bottom: 84px;
+    color: #005CAC;
 }
 
 .today-box {
     width: 80vw;
-    margin: 1vw auto;
+    margin: 2vw auto;
     background-color: #f1f1f1;
-    color: #005CAC;
     border-radius: 20px;
     padding: 1vw;
     border: 3px solid #005CAC;
@@ -303,7 +310,7 @@ nav a {
 
 .today-box2 {
     width: 30vw;
-    margin: 1vw auto;
+    margin: 5vw auto;
     border-radius: 50px;
     color: #f1f1f1;
     background-color: #da4d4d;
