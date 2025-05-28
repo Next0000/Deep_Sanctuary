@@ -2,9 +2,13 @@ body {
     font-family: "Kosugi Maru", sans-serif;
     font-weight: 500;
     padding-top: 8vw;
-    font-size: 65%;
+    font-size: 2vw;
     margin: 0;
     background-color: #f1f1f1;
+}
+
+h1 {
+    font-size: 20px;
 }
 
 h3 {
@@ -12,10 +16,11 @@ h3 {
     margin: 0;
     padding-top: 30px;
 }
+
 h4 {
     font-size: 15px;
     margin: 0;
-    padding: 10px 0 30px 0;
+    padding: 10px 0 60px 0;
 }
 
 
@@ -23,6 +28,10 @@ header {
     position: relative;
     height: 100%;
     margin: 0 auto;
+}
+footer {
+    position: relative;
+    background-color: #2A6A65;
 }
 
 nav {
@@ -68,7 +77,7 @@ nav li {
 }
 
 .item li:hover {
-    background-color: #005CAC;
+    background-color: #2A6A65;
     transition: background-color .7s ease 0s;
 }
 
@@ -79,7 +88,7 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: #005CAC;
+    color: #2A6A65;
 }
 
 .sns a {
@@ -238,7 +247,7 @@ nav a {
     align-items: center;
     justify-content: center;
     margin: 40px auto;
-    color: #005CAC;
+    color: #2A6A65;
     text-align: center;
 }
 
@@ -248,27 +257,28 @@ nav a {
     background-color: #da4d4d2d;
     border-radius: 20px;
     width: 80vw;
+    height: auto;
     text-align: center;
     margin: 40px auto;
-    padding: 20px;
+    padding: 20px 0;
 }
 
 .important ul {
     margin: 0;
-    padding: 0;
+    padding: 10px 0;
 }
 
 .important p {
-    font-size: 2vw;
-    margin: 0 0 15px 0;
+    padding: 0;
+    margin: 0;
     font-weight: bold;
 }
 
 .important li {
-    list-style: none;
+    width: 80%;
     text-align: left;
     font-size: 1.3vw;
-    margin: 5px 0;
+    margin: 5px auto;
 }
 
 /*block要素*/
@@ -279,7 +289,6 @@ nav a {
 }
 
 .content p {
-    font-size: 2vw;
     padding: 15px 0;
     margin: 0;
     font-weight: bold;
@@ -295,8 +304,8 @@ nav a {
 /*本日の営業時間*/
 .today-info {
     position: relative;
-    padding-bottom: 84px;
-    color: #005CAC;
+    padding-bottom: 100px;
+    color: #2A6A65;
 }
 
 .today-box {
@@ -305,7 +314,7 @@ nav a {
     background-color: #f1f1f1;
     border-radius: 20px;
     padding: 1vw;
-    border: 3px solid #005CAC;
+    border: 3px solid #2A6A65;
 }
 
 .today-box2 {
@@ -317,22 +326,26 @@ nav a {
 }
 
 .today-box-title {
-    background-color: #005CAC;
+    background-color: #2A6A65;
     color: #f1f1f1;
     border-radius: 10px;
 }
 
+.today-box-text {
+    font-size: 40px;
+}
+
 .today-box-min {
-    font-size: 1.5vw;
+    font-size: 1.3vw;
     font-weight: lighter;
 }
 
 
 /*イベント*/
 .event {
-    background-color: #778796;
+    background-color: #DAEAE9;
     position: relative;
-    padding-bottom: 84px;
+    padding-bottom: 100px;
 }
 
 .event-box {
@@ -340,19 +353,34 @@ nav a {
     position: relative;
     width: 80vw;
 }
-
+.event-box2 {
+    width: 30vw;
+    margin: 5vw auto;
+    border-radius: 50px;
+    color: #2A6A65;
+    border: 3px solid #2A6A65;
+}
 .slide2 {
     display: flex;
-    overflow-x: auto;
+    overflow-x: scroll;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
+    /*IE(Internet Explorer)・Microsoft Edgeへの対応*/
+    -ms-overflow-style: none;
+    /*Firefoxへの対応*/
+    scrollbar-width: none;
+}
+
+ /*Google Chrome、Safariへの対応*/
+.slide2::-webkit-scrollbar{
+  display: none;
 }
 
 .event-box-item {
     width: 40%;
-    padding: 0 3%;
-    margin: 0%;
+    padding:0 50px;
     scroll-snap-align: start;
+    scroll-snap-stop: always;
     flex: none;
 }
 
@@ -387,8 +415,8 @@ nav a {
         height: 50px;
         border-radius: 50%;
         color: #f1f1f1;
-        background-color: #005CAC;
-        border: 1px solid #005CAC;
+        background-color: #2A6A65;
+        border: 1px solid #2A6A65;
     }
 
     &::scroll-button(*):hover {
@@ -398,29 +426,21 @@ nav a {
     }
 }
 
-/*スクロールバー非表示（IE・Edge）*/
-.slide2 {
-    -ms-overflow-style: none;
-}
-
-/*スクロールバー非表示（Chrome・Safari）*/
-.slide2::-webkit-scrollbar {
-    display: none;
-}
 
 /*料金*/
 .price {
-    background-color: #414a52;
+    background-color: #ABD0CD;
     position: relative;
-    padding-bottom: 84px;
+    padding-bottom: 200px;
 }
 
 /*フロアマップ*/
 .factory-info {
     padding: 0 10%;
     position: relative;
-    background-color: #22272b;
+    background-color: #559691;
     color: #f1f1f1;
+    padding-bottom: 200px;
 }
 
 .factory-info ul {
@@ -608,8 +628,8 @@ nav a {
             height: 50px;
             border-radius: 50%;
             color: #f1f1f1;
-            background-color: #005CAC;
-            border: 1px solid #005CAC;
+            background-color: #2A6A65;
+            border: 1px solid #2A6A65;
         }
 
         &::scroll-button(*):hover {
