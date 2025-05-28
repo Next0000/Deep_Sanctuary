@@ -23,21 +23,53 @@ h4 {
     padding: 10px 0 60px 0;
 }
 
+p {
+    font-size: 30px;
+}
+
 
 header {
     position: relative;
     height: 100%;
     margin: 0 auto;
 }
+
 footer {
     position: relative;
     background-color: #2A6A65;
+    text-align: center;
+    color: #f1f1f1;
+    padding: 5vw 0;
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.footer-box1 ul {
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-box1 li {
+    display: inline-block;
+    min-width: 90px;
+    padding: 7px;
+}
+
+.footer-box1 li:not(:last-child) {
+    border-right: 2px solid #ddd;
+}
+
+.footer-box2 p {
+    font-size: 15px;
 }
 
 nav {
     display: flex;
     width: 100%;
-    height: 10vw;
     justify-content: space-between;
     align-items: center;
     text-align: center;
@@ -60,8 +92,8 @@ li {
 nav li {
     display: inline-block;
     min-width: 90px;
-    padding: 8px;
-    font-size: 1vw;
+    padding: 7px;
+    font-size: .9vw;
 }
 
 .sns li {
@@ -142,8 +174,8 @@ nav a {
 }
 
 .logo {
-    width: 20%;
-    height: 8vw;
+    width: 18vw;
+    height: 7vw;
     background-image: url(./pic/ロゴ.png);
     background-size: 95%;
     background-position: top right;
@@ -161,7 +193,6 @@ nav a {
 /* activeクラスが付与されたときのメニューのスタイル */
 .active+.menu {
     display: flex;
-
     animation-name: fadeIn;
     animation-fill-mode: forwards;
     animation-duration: .3s;
@@ -203,7 +234,7 @@ nav a {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 84px;
+    height: 100px;
     background-image: url(./pic/wave.png);
     background-size: 100%;
     background-position: center bottom;
@@ -253,13 +284,13 @@ nav a {
 
 
 .important {
-    color: #da4d4d;
-    background-color: #da4d4d2d;
+    color: #f86844;
+    background-color: #f8684427;
     border-radius: 20px;
     width: 80vw;
     height: auto;
     text-align: center;
-    margin: 40px auto;
+    margin: 40px auto 100px auto;
     padding: 20px 0;
 }
 
@@ -277,7 +308,7 @@ nav a {
 .important li {
     width: 80%;
     text-align: left;
-    font-size: 1.3vw;
+    font-size: 20px;
     margin: 5px auto;
 }
 
@@ -310,19 +341,11 @@ nav a {
 
 .today-box {
     width: 80vw;
-    margin: 2vw auto;
+    margin: 0 auto 2vw auto;
     background-color: #f1f1f1;
     border-radius: 20px;
     padding: 1vw;
     border: 3px solid #2A6A65;
-}
-
-.today-box2 {
-    width: 30vw;
-    margin: 5vw auto;
-    border-radius: 50px;
-    color: #f1f1f1;
-    background-color: #da4d4d;
 }
 
 .today-box-title {
@@ -333,10 +356,11 @@ nav a {
 
 .today-box-text {
     font-size: 40px;
+    color: #f86844;
 }
 
 .today-box-min {
-    font-size: 1.3vw;
+    font-size: 15px;
     font-weight: lighter;
 }
 
@@ -353,13 +377,20 @@ nav a {
     position: relative;
     width: 80vw;
 }
-.event-box2 {
+
+.bottom-box {
     width: 30vw;
     margin: 5vw auto;
     border-radius: 50px;
     color: #2A6A65;
-    border: 3px solid #2A6A65;
+    border: 2px solid #2A6A65;
+    background-color: #f1f1f1;
 }
+
+.bottom-box p {
+    font-size: 20px;
+}
+
 .slide2 {
     display: flex;
     overflow-x: scroll;
@@ -371,14 +402,14 @@ nav a {
     scrollbar-width: none;
 }
 
- /*Google Chrome、Safariへの対応*/
-.slide2::-webkit-scrollbar{
-  display: none;
+/*Google Chrome、Safariへの対応*/
+.slide2::-webkit-scrollbar {
+    display: none;
 }
 
 .event-box-item {
     width: 40%;
-    padding:0 50px;
+    padding: 0 50px;
     scroll-snap-align: start;
     scroll-snap-stop: always;
     flex: none;
@@ -431,7 +462,47 @@ nav a {
 .price {
     background-color: #ABD0CD;
     position: relative;
-    padding-bottom: 200px;
+    padding-bottom: 100px;
+}
+
+
+.price-box {
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+}
+
+.price-box-item {
+    width: 30%;
+    margin: auto;
+    border-radius: 20px;
+    padding: 1vw;
+    border: 3px solid #2A6A65;
+    background-color: #f1f1f1;
+}
+
+.price-box-title {
+    background-color: #2A6A65;
+    color: #f1f1f1;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.price-box-text {
+    display: flex;
+    justify-content: center;
+    color: #2A6A65;
+}
+
+.price-box-text p {
+    padding: 1vw;
+    margin-top: 1vw;
+}
+
+.price-box-text p:not(:last-child) {
+    border-right: 2px solid #2A6A65;
 }
 
 /*フロアマップ*/
@@ -440,28 +511,29 @@ nav a {
     position: relative;
     background-color: #559691;
     color: #f1f1f1;
-    padding-bottom: 200px;
+    padding-bottom: 100px;
 }
 
 .factory-info ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    margin-bottom: 5vw;
 }
 
 .factory-info li {
     width: 45%;
-    margin: 20px 0;
+    margin: 20px auto;
 }
 
 .factory-info li p {
     background-color: #f1f1f1;
     display: inline-block;
-    font-size: 2vw;
+    border-radius: 10px;
     padding: 15px 20px;
     font-weight: bold;
     margin-bottom: 5px;
-    color: #22272b;
+    color: #559691;
 }
 
 .factory-info li img {
@@ -469,11 +541,16 @@ nav a {
     border-radius: 20px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1265px) {
 
-    h3 {
-        font-size: 25px;
+    h1 {
+        font-size: 15px;
     }
+
+    p {
+        font-size: 20px;
+    }
+
 
     /* 480px以下に適用されるCSS（スマホ用） */
     .menu {
@@ -489,10 +566,9 @@ nav a {
     }
 
     .logo {
-        width: 30%;
+        width: 30vw;
         height: 12vw;
     }
-
 
     nav {
         height: 12vw;
@@ -500,6 +576,7 @@ nav a {
 
     nav li {
         text-align: center;
+        font-size: 15px;
     }
 
     .sns {
@@ -534,37 +611,19 @@ nav a {
     }
 
 
-    h1 {
-        font-size: 15px;
-    }
+
 
     .important {
         padding: 10px;
         border-radius: 10px;
     }
 
-    .important li {
-        font-size: 3vw;
-    }
-
-    .important p {
-        font-size: 15px;
-    }
 
     /*block要素*/
-    .content p {
-        font-size: 3.4vw;
-    }
-
     /*本日の営業時間*/
-    .today-info {
-        padding-bottom: 84px;
-    }
 
     .today-box {
-        margin: 2vw auto;
         border-radius: 10px;
-        padding: 2vw;
     }
 
     .today-box-title {
@@ -573,71 +632,50 @@ nav a {
 
     .today-box-min {
         display: block;
-        font-size: 15px;
     }
 
-    .today-box2 {
+    .bottom-box {
         width: 60vw;
-        margin: 1vw auto;
-        border-radius: 50px;
     }
 
     /*イベント*/
 
-    .slide2 {
-        display: flex;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
-    }
 
     .event-box-item {
-        width: 80%;
-        padding: 0 5%;
+        width: 65%;
         scroll-snap-align: center;
     }
 
-    .event-box-item p {
-        padding: 0;
-        text-align: left;
-    }
 
     .slide2 img {
-        border-radius: 20px;
+        border-radius: 10px;
+    }
+
+
+    /*料金*/
+
+
+    .price-box {
+        display: block;
+    }
+
+    .price-box-item {
         width: 100%;
-        object-fit: cover;
+        margin: 0 auto 10px auto;
+        border-radius: 10px;
     }
 
-    .slide2-btn {
-        &::scroll-button(right) {
-            position: absolute;
-            top: 40%;
-            right: 0;
-            content: ">" / "Scroll Right";
-        }
-
-        &::scroll-button(left) {
-            position: absolute;
-            top: 40%;
-            left: 0;
-            content: "<" / "Scroll Left";
-        }
-
-        &::scroll-button(*) {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            color: #f1f1f1;
-            background-color: #2A6A65;
-            border: 1px solid #2A6A65;
-        }
-
-        &::scroll-button(*):hover {
-            background-color: #22272b;
-            border: 1px solid #22272b;
-            color: #f1f1f1;
-        }
+    .price-box-text {
+        display: flex;
+        justify-content: center;
+        color: #2A6A65;
     }
+
+    .price-box-text p {
+        padding: 10px;
+        margin-top: 10px;
+    }
+
 
     /*フロアマップ*/
     .factory-info ul {
@@ -649,12 +687,28 @@ nav a {
         margin: 20px 0;
     }
 
-    .factory-info li p {
-        font-size: 3vw;
-    }
 
     .factory-info li img {
         border-radius: 10px;
+    }
+
+    /*footer*/
+
+    .footer-box1 ul {
+        width: 100vw;
+    }
+
+    .footer-box1 li {
+        min-width: 70px;
+        padding: 5px;
+    }
+
+    .footer-box1 li:not(:last-child) {
+        border-right: 1px solid #ddd;
+    }
+
+    .footer-box2 p {
+        font-size: 10px;
     }
 
 }
