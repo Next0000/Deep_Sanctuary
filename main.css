@@ -541,6 +541,47 @@ nav a {
     border-radius: 20px;
 }
 
+/*見どころ*/
+.highlights {
+    position: relative;
+    background-color: #559691;
+    color: #f1f1f1;
+    padding-bottom: 100px;
+}
+.highlights-box {
+    margin: auto;
+    position: relative;
+    width: 80vw;
+    background-color: yellowgreen;
+}
+
+.highlights-box-item {
+    width: 100%;
+    margin-bottom: 1vw;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background-color: #7a2727;
+}
+
+.highlights-box-A {
+    width: 50%;
+    background-color: #2A6A65;
+    color: #f1f1f1;
+}
+.highlights-box-A-text{
+    font-size: 20px;
+}
+
+.highlights-box-B {
+    width: 45%;
+    background-color: rgb(78, 78, 0);
+}
+.highlights-box-B img {
+    width: 100%;
+    border-radius: 20px;
+}
+
 @media screen and (max-width: 1265px) {
 
     h1 {
@@ -550,7 +591,6 @@ nav a {
     p {
         font-size: 20px;
     }
-
 
     /* 480px以下に適用されるCSS（スマホ用） */
     .menu {
